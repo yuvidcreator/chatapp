@@ -136,8 +136,8 @@ if DEBUG:
     STATIC_URL = 'static/'
     MEDIA_URL = 'media/'
 else:
-    STATIC_URL = '/var/www/angelguides/static'
-    MEDIA_URL = '/var/www/angelguides/media'
+    STATIC_URL = '/var/www/angelguides/static/'
+    MEDIA_URL = '/var/www/angelguides/media/'
 
 STATIC_ROOT = BASE_DIR / 'static'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
