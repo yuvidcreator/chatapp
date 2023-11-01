@@ -26,7 +26,7 @@ urlpatterns = [
     path('user/', include('user.urls', namespace='user')),
 ]
 
-settings.configure(DEBUG=True)
+# settings.configure(DEBUG=True)
 # settings.configure(default_settings=myapp_defaults, DEBUG=True)
 
 if settings.DEBUG:

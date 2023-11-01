@@ -71,6 +71,7 @@
 
         const PersonalSocket = new WebSocket(
             ws_scheme + window.location.host + '/ws/personal_chat/' + PersonalroomName + '/'
+            // ws_scheme + '://' + window.location.host + ':8001/' + '/ws/personal_chat/' + PersonalroomName + '/'
         );
         const set_online = () => {
             setTimeout(() => {

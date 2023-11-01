@@ -153,6 +153,7 @@
 
         var chatSocket = new WebSocket(
             ws_scheme + window.location.host + '/ws/chat/' + roomName + '/'
+            // ws_scheme + '://' + window.location.host + ':8001/' + '/ws/chat/' + roomName + '/'
         );
 
         // console.log('websocket established')
