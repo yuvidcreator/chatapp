@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+# from djangochannel import myapp_defaults
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib import admin
@@ -24,6 +25,9 @@ urlpatterns = [
     path('', include('chat.urls', namespace='chat')),
     path('user/', include('user.urls', namespace='user')),
 ]
+
+settings.configure(DEBUG=True)
+# settings.configure(default_settings=myapp_defaults, DEBUG=True)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
