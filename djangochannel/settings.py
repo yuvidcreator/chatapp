@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'kjdhghddi90a90auhfjsdfhsdfhjsdvfsdfvhvgv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -129,7 +129,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
+# STATIC_ROOT = BASE_DIR / 'static'
+
+if DEBUG:
+    STATIC_URL = 'static/'
+    MEDIA_URL = 'media/'
+else:
+    STATIC_URL = '/var/www/angelguides/static'
+    MEDIA_URL = '/var/www/angelguides/media'
+
 STATIC_ROOT = BASE_DIR / 'static'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
